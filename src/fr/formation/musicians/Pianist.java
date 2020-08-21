@@ -6,6 +6,7 @@ public class Pianist extends Musician {
 		super(name);
 	}
 
+	//on (re)définit le comportement de la méthode play()
 	@Override
 	public void play() {
 		System.out.println(getName() + " is playing piano");

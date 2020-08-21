@@ -12,7 +12,9 @@ public abstract class Musician {
 	public String getName() {
 		return name;
 	}
-
+	
+	//Un musicien peut jouer d'un instrument,
+	//le comportement sera défini dans la classe concrète
 	public abstract void play();
 	
 
