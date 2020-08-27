@@ -1,33 +1,20 @@
 package fr.formation.musicians;
 
-public abstract class Musician {
+public class Musician {
 	
 	private String name; // Encapsulation stricte
 	
 	private Instrument instrument;
 
-	//On ne peut pas construire une classe abstraite avec un new
 	public Musician(String name, Instrument instrument) {
 		this.name = name;
 		this.instrument = instrument;
 	}
 
-	public String getName() {
-		return name;
+	//accès aux données de la classe Musicien name et instrument
+	//getName() nom de la méthode getName de "l'instrument" pour récupérer le nom de l'instrument
+	public void play() {
+		System.out.println(name + " is playing " + instrument.getName());
 	}
 	
-	public Instrument getInstrument() {
-		return instrument;
-	}
-
-	//Un musicien peut jouer d'un instrument,
-	//le comportement sera défini dans la classe concrète
-	//cette méthode n'est pas exécutée dans la classe abstraite
-	public abstract void play();
-	
-	//s'implémenter par défaut car méthode non abstraite
-	public void toto() {
-		System.out.println("toto");
-	}
-
 }
